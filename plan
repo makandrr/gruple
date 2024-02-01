@@ -1,0 +1,39 @@
+DYNAMIC
+*General
+-Bundler (WebPack, Vite, Parcel, esbuild, SWC, Rollup, WMR, Rome, Turbo, Browserify, Fusebox, Gulp, Grunt, Browserify)
+-Framework (React, Angular, Vue, Ember, Backbone, Svelte, Preact, Next.js, Gatsby)
+
+*JS
+Babel
+TypeScript
+Traceur
+Polymer
+Knockout
+
+*CSS
+SASS
+Autoprefixer
+PostCSS
+Less
+STYLIS
+Stylus
+TailwindCSS
+Bootstrap
+Foundation
+Materialize
+Normalize
+Reset.css
+
+
+*HTML
+Pug
+
+
+
+
+
+
+STATIC
+
+HTML5 Boilerplate
+Astro

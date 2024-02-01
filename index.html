@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.4/axios.min.js" integrity="sha512-ANd7ZJmixP2T0hxOP4bS6hkci01fxyrQSyRdaY7IsWq1WlKsD0WwWBDVDZbnMR7CJZVKCTkDx/q5D5n2C2C+vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Gruple Panel</title>
+</head>
+<body class="dash">
+    <div class="initialization">
+        <h1>Gruple</h1>
+        <p>Choose type of new project</p>
+        <ul>
+            <li>
+                <div class="bullet"></div>
+                <img src="Untitled.png" alt="">
+                <h2>Static</h2>
+            </li>
+            <li>
+                <div class="bullet"></div>
+                <img src="Untitled-1.png" alt="">
+                <h2>Dynamic</h2>
+            </li>
+        </ul>
+        <div class="project-name">
+            <!-- <p>Project name</p> -->
+            <input id="projectNameInput" type="text" placeholder="Project name">
+            <button id="createBtn">Create</button>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="add-component">
+            <div class="marker" onclick="alert(123)">
+                <span class="material-symbols-outlined">
+                    chevron_left
+                    </span>
+                </div>
+            <ul class="menu-categories">
+                <li class="menu-category">
+                    <h2>HTML</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+                <li class="menu-category">
+                    <h2>CSS</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+                <li class="menu-category">
+                    <h2>JS</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+                <li class="menu-category">
+                    <h2>HTML</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+                <li class="menu-category">
+                    <h2>CSS</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+                <li class="menu-category">
+                    <h2>JS</h2>
+                    <ul>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                        <li>Component 1</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <header class="header">
+            <h1>Name</h1>
+            <p>settings</p>
+        </header>
+        <div class="category">
+            <header class="category-header">General</header>
+            <ul>
+                <li>
+                    Bundler
+                </li>
+                <li>
+                    Framework
+                </li>
+            </ul>
+        </div>
+        <div class="other-categories">
+            <div class="category">
+                <header class="category-header">HTML</header>
+                <ul>
+                    <li>
+                        Bundler
+                    </li>
+                    <li>
+                        Framework
+                    </li>
+                    <li class="placeholder">
+                        +
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <header class="category-header">CSS</header>
+                <ul>
+                    <li>
+                        Bundler
+                    </li>
+                    <li>
+                        Framework
+                    </li>
+                    <li>
+                        Framework
+                    </li>
+                    <li>
+                        Framework
+                    </li>
+                    <li class="placeholder">
+                        +
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const projectNameInput = document.getElementById('projectNameInput')
+        const createBtn = document.getElementById('createBtn')
+
+        createBtn.onclick = async () => {
+            console.log(projectNameInput.value)
+            const data = await axios.post('/init', { name: projectNameInput.value })
+            console.log(data.data)
+            document.body.className = 'dash'
+        }
+    </script>
+</body>
+</html>
